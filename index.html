@@ -1,0 +1,359 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake-Youtube</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            background-color: black;
+        }
+
+        .box1 {
+            margin: 0 0 0 50px;
+        }
+
+        span {
+            color: red;
+        }
+
+        sup {
+            font-size: 10px;
+            margin: 5px;
+        }
+
+        input {
+            border-radius: 50px;
+            font-size: 20px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .logo {
+            background: url(./img/youtube-logo-png-46016.png) center / cover;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0px;
+            left: 22px;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .lefts {
+            width: 20%;
+            height: 100%;
+        }
+
+        .center {
+            width: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 85px;
+            left: 100px;
+            padding: 10px;
+        }
+
+        .ad {
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: .4s;
+            background-color: rgb(224, 227, 230);
+            cursor: pointer;
+        }
+
+        .ad:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .left {
+            flex-direction: column;
+            margin: 35px;
+            padding: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .left:hover {
+            color: gray;
+        }
+
+        .logo1 {
+            background: url(./img/ev\ logo.png) center / cover;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 85px;
+            left: 10px;
+        }
+
+        .logo2 {
+            background: url(./img/shorts.png) center / cover;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 155px;
+            left: 10px;
+        }
+
+        .logo3 {
+            background: url(./img/video.png) center / cover;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 220px;
+            left: 10px;
+        }
+
+        .logo4 {
+            background: url(./img/kanal.jpg) center / cover;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 290px;
+            left: 10px;
+        }
+
+        .logo5 {
+            background: url(./img/history.png) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 360px;
+            left: 10px;
+        }
+
+        .logo6 {
+            background: url(./img/playlist.png) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 428px;
+            left: 10px;
+        }
+
+        .logo7 {
+            background: url(./img/video.png) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 495px;
+            left: 10px;
+        }
+
+        .logo8 {
+            background: url(./img/history.png) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 560px;
+            left: 10px;
+        }
+
+        .logo9 {
+            background: url(./img/like.jpg) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 625px;
+            left: 10px;
+        }
+
+        .logo10 {
+            background: url(./img/klip.png) center / cover;
+            width: 55px;
+            height: 45px;
+            position: absolute;
+            top: 683px;
+            left: -5px;
+        }
+
+        .logo11 {
+            background: url(./img/trend.png) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 830px;
+            left: 10px;
+        }
+
+        .logo12 {
+            background: url(./img/musiqi.png) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 900px;
+            left: 10px;
+        }
+
+        .logo13 {
+            background: url(./img/oyun.png) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 965px;
+            left: 10px;
+        }
+
+        .logo14 {
+            background: url(./img/idman.png) center / cover;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 1035px;
+            left: 10px;
+        }
+
+        .center2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            top: 150px;
+            left: 220px;
+            flex-wrap: wrap;
+        }
+
+        .img1 {
+            background: url(./img/baku.jpg) center / cover;
+            width: 400px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+        }
+
+        .img2 {
+            background: url(./img/italya.webp) center / cover;
+            width: 400px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+        }
+
+        .img3 {
+            background: url(./img/paris.jpg) center / cover;
+            width: 400px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+        }
+
+        .img4 {
+            background: url(./img/kapadokia.webp) center / cover;
+            width: 400px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+        }
+        .img5{
+            background: url(./img/italya.webp) center / cover;
+            width: 400px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+        }
+        .img6{
+            background: url(./img/paris.jpg ) center / cover;
+            width: 400px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="box1">
+            <h3>You<span>T</span>ube<sup>Az</sup></h3>
+        </div>
+        <div class="box2">
+            <input type="search" placeholder="search">
+        </div>
+        <div class="box3">
+            <a href="">Login</a>
+            <a href="">Siginup</a>
+        </div>
+    </div>
+    <div class="logo"></div>
+    <div class="main">
+        <div class="lefts">
+            <div class="left ">Ev</div>
+            <div class="left ">Shorts</div>
+            <div class="left ">Abunelikler</div>
+            <div class="left ">Kanaliniz</div>
+            <div class="left ">Tarixce</div>
+            <div class="left ">Pleylistler</div>
+            <div class="left ">Videolariniz</div>
+            <div class="left ">Sonra Izleryin</div>
+            <div class="left ">Beyenilen videolar</div>
+            <div class="left ">Klipleriniz</div>
+            <div class="left">
+                <h3>Kesf Edin</h3>
+            </div>
+            <div class="left">Trennde Olan</div>
+            <div class="left">Musiqi</div>
+            <div class="left">Oyunlar</div>
+            <div class="left">Idman</div>
+            <div class="logo1"></div>
+            <div class="logo2"></div>
+            <div class="logo3"></div>
+            <div class="logo4"></div>
+            <div class="logo5"></div>
+            <div class="logo6"></div>
+            <div class="logo7"></div>
+            <div class="logo8"></div>
+            <div class="logo9"></div>
+            <div class="logo10"></div>
+            <div class="logo11"></div>
+            <div class="logo12"></div>
+            <div class="logo13"></div>
+            <div class="logo14"></div>
+        </div>
+        <div class="center">
+            <div class="ad">Hamisi</div>
+            <div class="ad">Musiqi</div>
+            <div class="ad">Miksler</div>
+            <div class="ad">Oyunlar</div>
+            <div class="ad">Canli</div>
+            <div class="ad">Rep</div>
+
+        </div>
+        <div class="center2">
+            <div class="img1"></div>
+            <div class="img2"></div>
+            <div class="img3"></div>
+            <div class="img4"></div>
+            <div class="img5"></div>
+            <div class="img6"></div>
+        </div>
+    </div>
+</body>
+
+</html>
